@@ -5,146 +5,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>雪域传承 · 甘露药藏官方直销中心</title>
     <style>
-        body {
+        /* 全局重置与大背景设置 */
+        * {
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f4f5f7;
-            color: #333;
+            box-sizing: border-box;
         }
-        .header {
-            background-color: #5d368b;
-            color: white;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-image: url('https://s41.ax1x.com/2026/07/03/pmwOKbt.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px 10px;
+            min-height: 100vh;
+        }
+
+        /* 英文悬浮条 */
+        .top-bar {
+            width: 100%;
+            background-color: #4a266d;
+            color: #ffffff;
             text-align: center;
-            padding: 15px 0;
-            font-size: 20px;
+            padding: 6px 0;
+            font-size: 13px;
             font-weight: bold;
             letter-spacing: 2px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('这里替换成你的雪山背景图片网址') no-repeat center center;
-            background-size: cover;
-            height: 350px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 0 20px;
-        }
-        .hero h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-        .hero p {
-            font-size: 16px;
-            margin: 5px 0;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-        }
+
+        /* 主体容器（加入高级毛玻璃效果，确保文字清晰度） */
         .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        .price-section {
-            border-left: 4px solid #5d368b;
-            padding-left: 15px;
-            margin-bottom: 25px;
-        }
-        .price-item {
-            font-size: 18px;
-            margin: 10px 0;
-            font-weight: bold;
-        }
-        .price-item span {
-            color: #e4393c;
-            font-size: 22px;
-        }
-        .qr-section {
+            max-width: 480px;
+            margin: 50px auto 30px auto;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 24px;
             text-align: center;
-            background-color: #fff9ea;
-            border: 1px dashed #ffb822;
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 20px;
         }
-        .qr-image {
-            width: 220px;
-            height: 220px;
-            margin: 15px 0;
-            border: 1px solid #eee;
+
+        /* 标题样式增强（带阴影） */
+        .header h1 {
+            font-size: 22px;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
-        .notice {
+        .header p {
+            font-size: 13px;
             color: #666;
-            font-size: 14px;
-            line-height: 1.6;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        /* 价格区域美化 */
+        .price-box {
+            background-color: #fdf5f6;
+            border: 1px solid #f9d5d8;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 24px;
             text-align: left;
         }
+        .price-item {
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #333;
+        }
+        .price-item:last-child {
+            margin-bottom: 0;
+        }
+        .price-tag {
+            color: #e4393c;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .badge {
+            background-color: #e4393c;
+            color: white;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        /* 通道卡片样式 */
+        .pay-section {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 20px 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .channel-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .alipay-title { color: #00a3e9; }
+        .wechat-title { color: #1aad19; }
+
+        /* 二维码图片控制 */
+        .qr-image {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin: 0 auto;
+            border: 1px solid #eee;
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        /* 下单说明区域 */
+        .notice {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: left;
+            font-size: 13px;
+            color: #555;
+            margin-top: 15px;
+            border-left: 4px solid #4a266d;
+        }
+        .notice strong { color: #333; }
+
+        /* 底部绿色微信快捷按钮 */
         .btn-contact {
             display: block;
-            background-color: #28a745;
+            background-color: #1aad19;
             color: white;
-            text-align: center;
-            padding: 12px 0;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 6px;
             text-decoration: none;
-            margin-top: 20px;
-            box-shadow: 0 4px 6px rgba(40,167,69,0.2);
+            padding: 14px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 25px;
+            box-shadow: 0 4px 12px rgba(26, 173, 25, 0.3);
+            transition: background-color 0.2s;
         }
+        .btn-contact:hover {
+            background-color: #128e12;
+        }
+
+        /* 页脚 */
         .footer {
-            text-align: center;
-            padding: 30px 0;
-            font-size: 12px;
+            margin-top: 25px;
+            font-size: 11px;
             color: #999;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        GANLUYAOZANG
-    </div>
-
-    <div class="hero">
-        <h1>雪域传承 · 甘露药藏官方直销中心</h1>
-        <p>省藏医院内供渠道 · 专为精英阶层特供调理精粹</p>
-    </div>
+    <div class="top-bar">GANLUYAOZANG</div>
 
     <div class="container">
-        <div class="price-section">
-            <div class="price-item">精选套餐（买一）：<span>￥550.00</span></div>
-            <div class="price-item">优惠套餐（买三送一）：<span>￥1650.00</span></div>
+        
+        <div class="header">
+            <h1>雪域传承 · 甘露药藏官方直销中心</h1>
+            <p>省藏医院内供渠道 · 专为精英阶层特供调理精粹</p>
         </div>
 
-        <div class="qr-section">
-            <h3 style="color: #ff9800; margin-top: 0;">🔒 官方安全便捷支付通道</h3>
-            <p style="margin: 5px 0; font-size: 15px;">请长按或保存下方二维码，使用支付宝/微信扫码付款</p>
-            
-            <p style="font-weight: bold; color: #00a0e9; margin-bottom: 5px;">▼ 支付宝扫码付款通道</p>
-<img class="qr-image" src="https://s41.ax1x.com/2026/07/03/pmwOwV0.jpg" alt="支付宝收款码">
-
-<p style="font-weight: bold; color: #1aad19; margin-top: 20px; margin-bottom: 5px;">▼ 微信扫码付款通道</p>
-<img class="qr-image" src="https://s41.ax1x.com/2026/07/03/pmwOrPU.jpg" alt="微信收款码">
-            
-            <div class="notice">
-                <strong>💡 下单说明：</strong><br>
-                1. 付款时请务必在【转账备注】里填写您的<strong>姓名和手机号</strong>。<br>
-                2. 付款成功后，请直接截屏保留凭证，并点击下方按钮添加官方微信客服，发送您的【收货地址】，我们将安排顺丰/京东即刻包邮发货！
+        <div class="price-box">
+            <div class="price-item">
+                精选套装 (一盒)：<span class="price-tag">¥ 258.00</span>
+                <span class="badge">优惠名额 先到先得</span>
+            </div>
+            <div class="price-item">
+                优惠特惠 (买三送一)：<span class="price-tag">¥ 798.00</span>
             </div>
         </div>
 
-        <a href="weixin://dl/chat?Mammon0016" class="btn-contact">点击添加官方微信客服下单</a>
-    </div>
+        <p style="font-size: 13px; color: #666; margin-bottom: 15px; font-weight: bold;">🔒 官方安全便捷支付通道</p>
 
-    <div class="footer">
-        © 2026 甘露药藏官方直销中心 版权所有
+        <div class="pay-section">
+            <p class="channel-title alipay-title">▼ 支付宝扫码付款通道</p>
+            <img class="qr-image" src="https://s41.ax1x.com/2026/07/03/pmwOwV0.jpg" alt="支付宝收款码">
+        </div>
+
+        <div class="pay-section">
+            <p class="channel-title wechat-title">▼ 微信扫码付款通道</p>
+            <img class="qr-image" src="https://s41.ax1x.com/2026/07/03/pmwOrPU.jpg" alt="微信收款码">
+        </div>
+
+        <div class="notice">
+            <strong>💡 下单说明：</strong><br>
+            1. 付款时请务必在<strong>【转账备注】</strong>里填写您的<strong>姓名和手机号</strong>。<br>
+            2. 付款成功后，请直接截图保留凭证，并点击下方按钮添加官方微信客服，发送您的【收货地址】，我们将安排顺丰/京东即刻包邮发货！
+        </div>
+
+        <a href="weixin://dl/chat?Mammon0016" class="btn-contact">点击添加官方微信客服下单</a>
+
+        <div class="footer">
+            © 2026 甘露药藏官方直销中心 版权所有
+        </div>
+
     </div>
 
 </body>
