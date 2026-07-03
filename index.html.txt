@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪域传承 · 甘露药藏官方直销中心</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f5f7;
+            color: #333;
+        }
+        .header {
+            background-color: #5d368b;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('这里替换成你的雪山背景图片网址') no-repeat center center;
+            background-size: cover;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 16px;
+            margin: 5px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .price-section {
+            border-left: 4px solid #5d368b;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+        .price-item {
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .price-item span {
+            color: #e4393c;
+            font-size: 22px;
+        }
+        .qr-section {
+            text-align: center;
+            background-color: #fff9ea;
+            border: 1px dashed #ffb822;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        .qr-image {
+            width: 220px;
+            height: 220px;
+            margin: 15px 0;
+            border: 1px solid #eee;
+        }
+        .notice {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .btn-contact {
+            display: block;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(40,167,69,0.2);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        GANLUYAOZANG
+    </div>
+
+    <div class="hero">
+        <h1>雪域传承 · 甘露药藏官方直销中心</h1>
+        <p>省藏医院内供渠道 · 专为精英阶层特供调理精粹</p>
+    </div>
+
+    <div class="container">
+        <div class="price-section">
+            <div class="price-item">精选套餐（买一）：<span>￥550.00</span></div>
+            <div class="price-item">优惠套餐（买三送一）：<span>￥1650.00</span></div>
+        </div>
+
+        <div class="qr-section">
+            <h3 style="color: #ff9800; margin-top: 0;">🔒 官方安全便捷支付通道</h3>
+            <p style="margin: 5px 0; font-size: 15px;">请长按或保存下方二维码，使用支付宝/微信扫码付款</p>
+            
+            <p style="font-weight: bold; color: #00a0e9; margin-bottom: 5px;">▼ 支付宝扫码付款通道</p>
+<img class="qr-image" src="https://s41.ax1x.com/2026/07/03/pmwOwV0.jpg" alt="支付宝收款码">
+
+<p style="font-weight: bold; color: #1aad19; margin-top: 20px; margin-bottom: 5px;">▼ 微信扫码付款通道</p>
+<img class="qr-image" src="https://s41.ax1x.com/2026/07/03/pmwOrPU.jpg" alt="微信收款码">
+            
+            <div class="notice">
+                <strong>💡 下单说明：</strong><br>
+                1. 付款时请务必在【转账备注】里填写您的<strong>姓名和手机号</strong>。<br>
+                2. 付款成功后，请直接截屏保留凭证，并点击下方按钮添加官方微信客服，发送您的【收货地址】，我们将安排顺丰/京东即刻包邮发货！
+            </div>
+        </div>
+
+        <a href="weixin://dl/chat?Mammon0016" class="btn-contact">点击添加官方微信客服下单</a>
+    </div>
+
+    <div class="footer">
+        © 2026 甘露药藏官方直销中心 版权所有
+    </div>
+
+</body>
+</html>
