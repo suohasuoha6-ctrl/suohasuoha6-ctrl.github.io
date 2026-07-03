@@ -201,13 +201,29 @@
             <img class="qr-image" src="https://s41.ax1x.com/2026/07/03/pmwOrPU.jpg" alt="微信收款码">
         </div>
 
+       <!-- 下单说明 -->
         <div class="notice">
             <strong>💡 下单说明：</strong><br>
             1. 付款时请务必在<strong>【转账备注】</strong>里填写您的<strong>姓名和手机号</strong>。<br>
-            2. 付款成功后，请直接截图保留凭证，并点击下方按钮添加官方微信客服，发送您的【收货地址】，我们将安排顺丰/京东即刻包邮发货！
+            2. 付款成功后，请直接截图保留凭证。请复制下方微信号，前往微信添加客服发送您的【收货地址】，我们将安排顺丰/京东即刻包邮发货！
         </div>
 
-        <a href="weixin://dl/chat?Mammon0016" class="btn-contact">点击添加官方微信客服下单</a>
+        <!-- 微信客服复制按钮 -->
+        <button onclick="copyWeChat()" class="btn-contact" style="width: 100%; border: none; cursor: pointer;">
+            📋 点击复制客服微信号：Mammon0016
+        </button>
+
+        <script>
+        function copyWeChat() {
+            var tempInput = document.createElement("input");
+            tempInput.value = "Mammon0016";
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("微信号 Mammon0016 已成功复制！\n请前往微信添加客服。");
+        }
+        </script>
 
         <div class="footer">
             © 2026 甘露药藏官方直销中心 版权所有
