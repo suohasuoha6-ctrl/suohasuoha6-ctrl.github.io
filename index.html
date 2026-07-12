@@ -77,28 +77,37 @@
             margin-bottom: 24px;
             text-align: left;
         }
+        .price-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #c00;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #f9d5d8;
+            padding-bottom: 5px;
+        }
         .price-item {
-            margin-bottom: 8px;
-            font-size: 15px;
-            color: #333;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #444;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .price-item:last-child {
             margin-bottom: 0;
         }
         .price-tag {
             color: #e4393c;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
         }
-        .container .badge {
+        .badge {
             background-color: #e4393c;
             color: white;
             font-size: 11px;
-            padding: 2px 6px;
+            padding: 1px 5px;
             border-radius: 4px;
-            margin-left: 6px;
-            vertical-align: middle;
-            display: inline-block;
+            margin-left: 5px;
         }
 
         /* 通道卡片样式 */
@@ -184,12 +193,22 @@
 
         <!-- 价格套餐部分 -->
         <div class="price-box">
-            <div class="price-item">
-                精选套装 (一盒)：<span class="price-tag">¥ 258.00</span>
-                <span class="badge">优惠名额 先到先得</span>
+            <div class="price-title">🔥 限量梯度特惠（每套 6 丸 / 京东顺丰包邮）</div>
+            <div class="price-item" style="background: #fff0f0; padding: 4px 8px; border-radius: 6px;">
+                <span>1-20名 (原价198 优惠50) <span class="badge">火爆抢购中</span></span>
+                <span class="price-tag">¥ 148.00</span>
             </div>
-            <div class="price-item">
-                优惠特惠 (买三送一)：<span class="price-tag">¥ 798.00</span>
+            <div class="price-item" style="padding: 4px 8px;">
+                <span>21-60名 (原价198 优惠30)</span>
+                <span class="price-tag" style="color: #666;">¥ 168.00</span>
+            </div>
+            <div class="price-item" style="padding: 4px 8px;">
+                <span>61-100名 (原价198 优惠20)</span>
+                <span class="price-tag" style="color: #666;">¥ 178.00</span>
+            </div>
+            <div class="price-item" style="margin-top: 8px; border-top: 1px dashed #f9d5d8; padding-top: 8px; padding-left: 8px; font-weight: bold; color: #e4393c;">
+                <span>🎁 叠加福利：买三送一</span>
+                <span>更划算</span>
             </div>
         </div>
 
@@ -211,10 +230,10 @@
         <div class="notice">
             <strong>💡 下单说明：</strong><br>
             1. 付款时请务必在<strong>【转账备注】</strong>里填写您的<strong>姓名和手机号</strong>。<br>
-            2. 付款成功后，请直接截图保留凭证。请复制下方微信号，前往微信添加客服发送您的【收货地址】，我们将安排顺丰/京东即刻包邮发货！
+            2. 付款成功后，请直接截图保留凭证。请下滑到最下方点击按钮添加客服微信发送您的【收货地址】，我们将安排顺丰/京东即刻包邮发货！
         </div>
 
-        <!-- 微信客服复制按钮 -->
+        <!-- 底部微信客服复制按钮 -->
         <button onclick="copyWeChat()" class="btn-contact" style="width: 100%; border: none; cursor: pointer;">
             📋 点击复制客服微信号：Mammon0016
         </button>
