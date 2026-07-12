@@ -74,7 +74,7 @@
             border: 1px solid #f9d5d8;
             border-radius: 10px;
             padding: 16px;
-            margin-bottom: 24px;
+            margin-bottom: 15px;
             text-align: left;
         }
         .price-title {
@@ -108,6 +108,24 @@
             padding: 1px 5px;
             border-radius: 4px;
             margin-left: 5px;
+        }
+
+        /* 绿色微信快捷按钮 */
+        .btn-contact {
+            display: block;
+            background-color: #1aad19;
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 15px 0 25px 0;
+            box-shadow: 0 4px 12px rgba(26, 173, 25, 0.3);
+            transition: background-color 0.2s;
+        }
+        .btn-contact:hover {
+            background-color: #128e12;
         }
 
         /* 通道卡片样式 */
@@ -150,24 +168,6 @@
             border-left: 4px solid #4a266d;
         }
         .notice strong { color: #333; }
-
-        /* 底部绿色微信快捷按钮 */
-        .btn-contact {
-            display: block;
-            background-color: #1aad19;
-            color: white;
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            margin-top: 25px;
-            box-shadow: 0 4px 12px rgba(26, 173, 25, 0.3);
-            transition: background-color 0.2s;
-        }
-        .btn-contact:hover {
-            background-color: #128e12;
-        }
 
         /* 页脚 */
         .footer {
@@ -212,7 +212,13 @@
             </div>
         </div>
 
-        <p style="font-size: 13px; color: #666; margin-bottom: 15px; font-weight: bold;">🔒 官方安全便捷支付通道</p>
+        <!-- 提前的微信客服复制按钮 -->
+        <p style="font-size: 13px; color: #666; margin-top: 20px;">💬 建议先添加客服，看朋友圈真实反馈：</p>
+        <button onclick="copyWeChat()" class="btn-contact" style="width: 100%; border: none; cursor: pointer;">
+            📋 点击复制客服微信号：Mammon0016
+        </button>
+
+        <p style="font-size: 13px; color: #666; margin-bottom: 15px; font-weight: bold; border-top: 1px solid #eee; padding-top: 20px;">🔒 自助支付通道（付完请添加上方微信发送地址）</p>
 
         <!-- 支付宝通道 -->
         <div class="pay-section">
@@ -230,13 +236,8 @@
         <div class="notice">
             <strong>💡 下单说明：</strong><br>
             1. 付款时请务必在<strong>【转账备注】</strong>里填写您的<strong>姓名和手机号</strong>。<br>
-            2. 付款成功后，请直接截图保留凭证。请下滑到最下方点击按钮添加客服微信发送您的【收货地址】，我们将安排顺丰/京东即刻包邮发货！
+            2. 付款成功后，请截图保留凭证，并点击上方绿色按钮添加客服微信号发送您的【收货地址】，安排即刻包邮发货！
         </div>
-
-        <!-- 底部微信客服复制按钮 -->
-        <button onclick="copyWeChat()" class="btn-contact" style="width: 100%; border: none; cursor: pointer;">
-            📋 点击复制客服微信号：Mammon0016
-        </button>
 
         <script>
         function copyWeChat() {
@@ -259,5 +260,3 @@
 
 </body>
 </html>
-
-
