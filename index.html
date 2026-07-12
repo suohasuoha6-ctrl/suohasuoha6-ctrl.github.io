@@ -120,7 +120,7 @@
             border-radius: 10px;
             font-weight: bold;
             font-size: 16px;
-            margin: 15px 0 25px 0;
+            margin: 10px 0 20px 0;
             box-shadow: 0 4px 12px rgba(26, 173, 25, 0.3);
             transition: background-color 0.2s;
         }
@@ -164,7 +164,7 @@
             text-align: left;
             font-size: 13px;
             color: #555;
-            margin-top: 15px;
+            margin: 15px 0 20px 0;
             border-left: 4px solid #4a266d;
         }
         .notice strong { color: #333; }
@@ -193,7 +193,7 @@
 
         <!-- 价格套餐部分 -->
         <div class="price-box">
-            <div class="price-title">🔥 限量梯度特惠（每套 6 丸 / 京东顺丰包邮）</div>
+            <div class="price-title">🔥 限量梯度特惠（每套 6物理 / 京东顺丰包邮）</div>
             <div class="price-item" style="background: #fff0f0; padding: 4px 8px; border-radius: 6px;">
                 <span>1-20名 (原价198 优惠50) <span class="badge">火爆抢购中</span></span>
                 <span class="price-tag">¥ 148.00</span>
@@ -212,13 +212,20 @@
             </div>
         </div>
 
-        <!-- 提前的微信客服复制按钮 -->
-        <p style="font-size: 13px; color: #666; margin-top: 20px;">💬 建议先添加客服，看朋友圈真实反馈：</p>
+        <!-- 【核心调整】紧跟价格下方的微信客服复制按钮 -->
+        <p style="font-size: 13px; color: #666; margin-top: 10px;">💬 建议先添加客服，获取老客户调理反馈：</p>
         <button onclick="copyWeChat()" class="btn-contact" style="width: 100%; border: none; cursor: pointer;">
             📋 点击复制客服微信号：Mammon0016
         </button>
 
-        <p style="font-size: 13px; color: #666; margin-bottom: 15px; font-weight: bold; border-top: 1px solid #eee; padding-top: 20px;">🔒 自助支付通道（付完请添加上方微信发送地址）</p>
+        <!-- 【核心调整】下单说明上移，在付款码之前展示 -->
+        <div class="notice">
+            <strong>💡 下单说明：</strong><br>
+            1. 付款时请务必在<strong>【转账备注】</strong>里填写您的<strong>姓名和手机号</strong>。<br>
+            2. 付款成功后截图留存，通过上方按钮添加客服微信发送您的【收货地址】，安排即刻顺丰包邮发货！
+        </div>
+
+        <p style="font-size: 13px; color: #666; margin-bottom: 15px; font-weight: bold; border-top: 1px solid #eee; padding-top: 15px;">🔒 自助快捷支付通道</p>
 
         <!-- 支付宝通道 -->
         <div class="pay-section">
@@ -230,13 +237,6 @@
         <div class="pay-section">
             <p class="channel-title wechat-title">▼ 微信扫码付款通道</p>
             <img class="qr-image" src="https://images.weserv.nl/?url=https://www.helloimg.com/i/2026/07/04/6a48abf01c0a0.jpg" alt="微信收款码">
-        </div>
-
-        <!-- 下单说明 -->
-        <div class="notice">
-            <strong>💡 下单说明：</strong><br>
-            1. 付款时请务必在<strong>【转账备注】</strong>里填写您的<strong>姓名和手机号</strong>。<br>
-            2. 付款成功后，请截图保留凭证，并点击上方绿色按钮添加客服微信号发送您的【收货地址】，安排即刻包邮发货！
         </div>
 
         <script>
